@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Aquaria</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Our Beverages</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="products">
+        <div class="product-list">
+            <div class="product">
+                <img src="images/water.jpg" alt="Packaged Drinking Water">
+                <h3>Packaged Drinking Water</h3>
+                <p>₹10</p>
+                <button class="cart-btn" onclick="updateCart('water', -1, 10)">-</button>
+                <span class="cart-quantity" id="water-count">0</span>
+                <button class="cart-btn" onclick="updateCart('water', 1, 10)">+</button>
+            </div>
+            <div class="product">
+                <img src="images/juice.jpg" alt="Fresh Fruit Juice">
+                <h3>Fresh Fruit Juice</h3>
+                <p>₹15</p>
+                <button class="cart-btn" onclick="updateCart('juice', -1, 15)">-</button>
+                <span class="cart-quantity" id="juice-count">0</span>
+                <button class="cart-btn" onclick="updateCart('juice', 1, 15)">+</button>
+            </div>
+            <div class="product">
+                <img src="images/smoothie.jpg" alt="Smoothies">
+                <h3>Smoothies</h3>
+                <p>₹25</p>
+                <button class="cart-btn" onclick="updateCart('smoothie', -1, 25)">-</button>
+                <span class="cart-quantity" id="smoothie-count">0</span>
+                <button class="cart-btn" onclick="updateCart('smoothie', 1, 25)">+</button>
+            </div>
+            <div class="product">
+                <img src="images/energy.jpg" alt="Energy Drinks">
+                <h3>Energy Drinks</h3>
+                <p>₹50</p>
+                <button class="cart-btn" onclick="updateCart('energy', -1, 50)">-</button>
+                <span class="cart-quantity" id="energy-count">0</span>
+                <button class="cart-btn" onclick="updateCart('energy', 1, 50)">+</button>
+            </div>
+            
+            <!-- Additional 50 beverage products -->
+            <div class="product">
+                <img src="images/coconut.jpg" alt="Coconut Water">
+                <h3>Coconut Water</h3>
+                <p>₹30</p>
+                <button class="cart-btn" onclick="updateCart('coconut', -1, 30)">-</button>
+                <span class="cart-quantity" id="coconut-count">0</span>
+                <button class="cart-btn" onclick="updateCart('coconut', 1, 30)">+</button>
+            </div>
+            <div class="product">
+                <img src="images/mango_juice.jpg" alt="Mango Juice">
+                <h3>Mango Juice</h3>
+                <p>₹35</p>
+                <button class="cart-btn" onclick="updateCart('mango_juice', -1, 35)">-</button>
+                <span class="cart-quantity" id="mango_juice-count">0</span>
+                <button class="cart-btn" onclick="updateCart('mango_juice', 1, 35)">+</button>
+            </div>
+            <div class="product">
+                <img src="images/apple_juice.jpg" alt="Apple Juice">
+                <h3>Apple Juice</h3>
+                <p>₹40</p>
+                <button class="cart-btn" onclick="updateCart('apple_juice', -1, 40)">-</button>
+                <span class="cart-quantity" id="apple_juice-count">0</span>
+                <button class="cart-btn" onclick="updateCart('apple_juice', 1, 40)">+</button>
+            </div>
+            <div class="product">
+                <img src="images/pineapple_juice.jpg" alt="Pineapple Juice">
+                <h3>Pineapple Juice</h3>
+                <p>₹45</p>
+                <button class="cart-btn" onclick="updateCart('pineapple_juice', -1, 45)">-</button>
+                <span class="cart-quantity" id="pineapple_juice-count">0</span>
+                <button class="cart-btn" onclick="updateCart('pineapple_juice', 1, 45)">+</button>
+            </div>
+        </div>
+    </section>
+
+    <a href="cart.html" class="view-cart-btn">Go to Cart</a>
+
+    <footer>
+        <p>&copy; 2025 Aquaria. All rights reserved.</p>
+    </footer>
+</body>
+</html>
