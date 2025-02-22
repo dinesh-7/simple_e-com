@@ -1,0 +1,25 @@
+{
+  "name": "simple_e-com",
+  "version": "1.0.0",
+  "description": "Simple E-com app with orders liquid items",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dinesh-7/simple_e-com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dinesh-7/simple_e-com/issues"
+  },
+  "homepage": "https://github.com/dinesh-7/simple_e-com#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
