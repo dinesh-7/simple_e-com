@@ -22,6 +22,9 @@ app.use(express.urlencoded({ extended: true })); // If sending form data
 const orderRoutes = require('./routes/orderRoute'); // Import order routes
 app.use('/orders', orderRoutes);
 
+const userRoutes = require('./routes/userRoute'); // Import user routes
+app.use('/users', userRoutes);
+
 
 app.listen(PORT,()=>{
     console.log(`Server is running on http://localhost:${PORT}`);
