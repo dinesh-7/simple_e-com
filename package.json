@@ -18,10 +18,13 @@
   },
   "homepage": "https://github.com/dinesh-7/simple_e-com#readme",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "mongoose": "^8.10.1"
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.10.1",
+    "validator": "^13.12.0"
   }
 }

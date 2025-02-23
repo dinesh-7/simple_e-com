@@ -1,9 +1,10 @@
 const express = require('express');
-const { register, login } = require('../controllers/userController');
+const { register, login, getUserInfo} = require('../controllers/userController');
 
 const router = express.Router();
 
 router.post('/register', register);  // Endpoint to place an order
-router.get('/login', login);  // Endpoint to get all orders
+router.post('/login', login);  // Endpoint to get all orders
+router.get('/profile', getUserInfo);  // Endpoint to get user info
 
 module.exports = router;
