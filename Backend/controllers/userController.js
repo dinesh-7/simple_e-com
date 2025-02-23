@@ -30,13 +30,15 @@ const login = async (req, res) => {
         }
         const token = jwt.sign({ email: loginUser.email }, process.env.JWT_SECRET, { expiresIn: "1d" });
 
-        res.status(200).json({ message: "Login successfully!", token ,User_Login_Info: loginUser });
+        res.status(200).json({ message: "Login successfully!", token ,role: loginUser.role });
 
     } catch (error) {
         res.status(500).json({ message: "Error Logging In ", error: error.message });
     }
 };
 
+
+//using this same in the authenticaion middleware
 const getUserInfo = async (req, res) => {
     try {
         const authHeader = req.headers.authorization;

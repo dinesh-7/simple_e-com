@@ -20,12 +20,20 @@ const orderSchema = new mongoose.Schema({
 });
 
 orderSchema.statics.placeOrder = async function (customerName, address,mobile, items, totalAmount) {
+
+    const formattedItems = Object.keys(items).map((key) => ({
+        name: key,
+        quantity: items[key].quantity,
+        price: items[key].price,
+        total: items[key].quantity * items[key].price
+    }));
+
     try{
         const order = new this({ 
             customerName, 
             address, 
             mobile,
-            items, 
+            items: formattedItems,
             totalAmount 
         });
         return await order.save();
@@ -43,6 +51,15 @@ orderSchema.statics.getAllOrders = async function () {
         console.log("Got error in Getting all the Orders " + error);
     }
 };
+
+orderSchema.statics.updateOrderStatus = async function (orderId, status) {
+    try{
+        return await this.findByIdAndUpdate(orderId, { status }, { new: true });
+    }
+    catch(error){
+        console.log("Got error in Updating the Order Status " + error);
+    }
+}
 
 const Order = mongoose.model('Order', orderSchema);
 module.exports = Order;

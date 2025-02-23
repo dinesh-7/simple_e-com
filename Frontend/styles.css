@@ -1,4 +1,5 @@
 body {
+    /* background: linear-gradient(to right, #6a11cb, #2575fc); */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -7,11 +8,11 @@ body {
 }
 
 header {
-    background: #0077cc;
+    background-color: #007bff;
     color: white;
-    padding: 20px;
+    padding: 15px;
+    text-align: center;
 }
-
 nav ul {
     list-style: none;
     padding: 0;
@@ -70,6 +71,37 @@ nav ul li a {
     text-align: center;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+input, select, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+textarea {
+    height: 100px;
+}
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #0056b3;
+}
 
 .product-grid {
     display: flex;
@@ -294,6 +326,189 @@ h2 {
 
 
 
+/* Profile Dropdown */
+.profile-menu {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.profile-btn {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.profile-btn:hover {
+    background-color: #005fa3;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 150px;
+    text-align: left;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #0077cc;
+    color: white;
+}
+
+/* Show dropdown on hover */
+.profile-menu:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+/* body {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+
+
+/* Gradient Background */
+/* body {
+    
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+} */ 
+
+/* Centering the Container */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Form Box Styling */
+.auth-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 400px; /* Adjusted width */
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures form is centered inside */
+}
+
+/* Form Elements */
+.input-group {
+    width: 100%;  /* Ensures inputs are evenly aligned */
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: 0.3s;
+    box-sizing: border-box; /* Fixes input width */
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #2575fc;
+    outline: none;
+    box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+}
+/* Make Address Box Bigger */
+#address {
+    height: 80px;  /* Increase height */
+    resize: vertical; /* Allow users to expand if needed */
+}
+
+
+/* Button Styling */
+.btn {
+    width: 100%;
+    background: #2575fc;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1e63d3;
+}
+
+/* Footer Text */
+.auth-footer {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.auth-footer a {
+    color: #2575fc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 
